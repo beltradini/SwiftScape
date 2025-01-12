@@ -8,12 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var canvasModel = CanvasViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            // Canvas Area
+            CanvasView(canvasModel1: canvasModel)
+                .frame(maxHeight: 400)
+                .padding()
+            
+            // Action Buttons
+            HStack {
+                Button("Add Button") {
+                    let button = ButtonComponent(position: CGPoint(x: 100, y: 100), size: CGSize(width: 120, height: 50), zIndex: 1, backgroundColor: .blue, isResizable: true, title: "New Button")
+                    canvasModel.addComponent(button)
+                }
+            }
+            
+            Button("Remove Selected") {
+                if let selected = canvasModel.selectedComponent {
+                    canvasModel.removeComponent(selected)
+                }
+            }
+            
+            Button("Generate Code") {
+                let code = canvasModel.generateCode()
+                print(code) // Export or display the code
+            }
         }
         .padding()
     }

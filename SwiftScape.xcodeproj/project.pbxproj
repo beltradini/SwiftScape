@@ -6,14 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9D1225C22D32E1E000E75075 /* SwiftScapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */; };
+		9DE196C82D3435B700E55283 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9DE196C72D3435AF00E55283 /* LICENSE */; };
+		9DE196CA2D34362D00E55283 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9DE196C92D34362400E55283 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		9D1225A92D32E13400E75075 /* SwiftScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1225A92D32E13400E75075 /* SwiftScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftScape.app; path = "/Users/alexbeltran/Library/Mobile Documents/com~apple~CloudDocs/Swift Code/gitHub projects/SwiftScape/build/Debug-iphoneos/SwiftScape.app"; sourceTree = "<absolute>"; };
+		9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftScapeApp.swift; sourceTree = "<group>"; };
+		9DE196C72D3435AF00E55283 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9DE196C92D34362400E55283 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9D1225AB2D32E13400E75075 /* SwiftScape */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SwiftScape;
+			sourceTree = "<group>";
+		};
+		9D1225C32D32E1F700E75075 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D1225C42D32E20100E75075 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D1225C52D32E20A00E75075 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,17 +56,14 @@
 		9D1225A02D32E13400E75075 = {
 			isa = PBXGroup;
 			children = (
+				9DE196C92D34362400E55283 /* README.md */,
+				9DE196C72D3435AF00E55283 /* LICENSE */,
+				9D1225C52D32E20A00E75075 /* ViewModels */,
+				9D1225C42D32E20100E75075 /* Views */,
+				9D1225C32D32E1F700E75075 /* Models */,
 				9D1225AB2D32E13400E75075 /* SwiftScape */,
-				9D1225AA2D32E13400E75075 /* Products */,
+				9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */,
 			);
-			sourceTree = "<group>";
-		};
-		9D1225AA2D32E13400E75075 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9D1225A92D32E13400E75075 /* SwiftScape.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,6 +83,9 @@
 			);
 			fileSystemSynchronizedGroups = (
 				9D1225AB2D32E13400E75075 /* SwiftScape */,
+				9D1225C32D32E1F700E75075 /* Models */,
+				9D1225C42D32E20100E75075 /* Views */,
+				9D1225C52D32E20A00E75075 /* ViewModels */,
 			);
 			name = SwiftScape;
 			packageProductDependencies = (
@@ -95,7 +119,7 @@
 			mainGroup = 9D1225A02D32E13400E75075;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9D1225AA2D32E13400E75075 /* Products */;
+			productRefGroup = 9D1225A02D32E13400E75075;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -109,6 +133,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE196CA2D34362D00E55283 /* README.md in Resources */,
+				9DE196C82D3435B700E55283 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1225C22D32E1E000E75075 /* SwiftScapeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
