@@ -1,6 +1,6 @@
-# 🌟 GeneratorUI
+# 🌟 SwiftScape
 
-GeneratorUI is an interactive tool developed in SwiftUI to create custom user interfaces intuitively. This project is designed to allow users to generate designs and export the necessary SwiftUI code, saving time and facilitating app development.
+SwiftScape is an interactive tool developed in SwiftUI to create custom user interfaces intuitively. This project is designed to allow users to generate designs and export the necessary SwiftUI code, saving time and facilitating app development.
 
 ## ✨ Key Features
 
@@ -32,7 +32,7 @@ Button(action: {
 ### Example of a Vertical Stack with Text and Button
 ```swift
 VStack {
-    Text("Welcome to GeneratorUI")
+    Text("Welcome to SwiftScape")
         .font(.title)
         .padding()
 
@@ -52,12 +52,12 @@ VStack {
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your_username/GeneratorUI.git
+   git clone https://github.com/your_username/SwiftScape.git
    ```
 
 2. Open the project in Xcode:
    ```bash
-   open GeneratorUI.xcodeproj
+   open SwiftScape.xcodeproj
    ```
 
 3. Select a simulator or physical device and run the application.
