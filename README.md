@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
 # 🌟 SwiftScape
 
 SwiftScape is an interactive tool developed in SwiftUI to create custom user interfaces intuitively. This project is designed to allow users to generate designs and export the necessary SwiftUI code, saving time and facilitating app development.
-=======
-# 🌟 GeneratorUI
-
-GeneratorUI is an interactive tool developed in SwiftUI to create custom user interfaces intuitively. This project is designed to allow users to generate designs and export the necessary SwiftUI code, saving time and facilitating app development.
->>>>>>> Stashed changes
 
 ## ✨ Key Features
 
@@ -62,20 +56,12 @@ VStack {
 
 1. Clone this repository to your local machine:
    ```bash
-<<<<<<< Updated upstream
    git clone https://github.com/your_username/SwiftScape.git
-=======
-   git clone https://github.com/your_username/GeneratorUI.git
->>>>>>> Stashed changes
    ```
 
 2. Open the project in Xcode:
    ```bash
-<<<<<<< Updated upstream
    open SwiftScape.xcodeproj
-=======
-   open GeneratorUI.xcodeproj
->>>>>>> Stashed changes
    ```
 
 3. Select a simulator or physical device and run the application.
@@ -119,20 +105,10 @@ Contributions are welcome! If you have ideas or find an issue, feel free to open
 
 ## 📜 License
 
-<<<<<<< Updated upstream
-This project is licensed under the MIT License. See the [MIT License] (https://opensource.org/license/mit) file for details.
-=======
 This project is licensed under the MIT License. See the [MIT License](https://opensource.org/license/mit) file for details.
->>>>>>> Stashed changes
 
 ## 🙌 Credits
 
 Developed by [Alejandro Beltrán](https://github.com/beltradini).
 
----
-
-Thank you for using GeneratorUI! If you like the project, don’t forget to ⭐ it on GitHub.
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
+Thank you for using SwiftScape! If you like the project, don’t forget to ⭐ it on GitHub.
