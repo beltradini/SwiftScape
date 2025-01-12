@@ -32,11 +32,7 @@ Button(action: {
 ### Example of a Vertical Stack with Text and Button
 ```swift
 VStack {
-<<<<<<< Updated upstream
     Text("Welcome to SwiftScape")
-=======
-    Text("Welcome to GeneratorUI")
->>>>>>> Stashed changes
         .font(.title)
         .padding()
 
