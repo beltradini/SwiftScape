@@ -52,7 +52,7 @@ VStack {
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your_username/SwiftScape.git
+   git clone https://github.com/beltradini/SwiftScape.git
    ```
 
 2. Open the project in Xcode:
