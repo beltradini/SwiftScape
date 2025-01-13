@@ -20,6 +20,11 @@ protocol UIComponent: Identifiable {
     var imageName: String { get }
     var cornerRadius: CGFloat { get }
     var contentMode: ContentMode { get }
+    // Future improvements: Advanced Code Generator 
+    var name: String { get set } // Name of the component 
+    var propiedades: [String: Any] { get set } // Properties of the component
+    var children: [UIComponent] { get set } // Child components
+    var isModule: Bool { get set } // Whether the component is a module or not
     
     // Generate SwiftUI code this component
     func generateSwiftCode() -> String

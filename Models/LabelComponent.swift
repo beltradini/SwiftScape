@@ -17,14 +17,13 @@ struct LabelComponent: UIComponent {
     var text: String
     var fontSize: CGFloat
     var textColor: Color
+    var name: String = "Label"
+    var propiedades: [String: Any] = [:]
+    var children: [UIComponent] = []
+    var isModule: Bool = false
     
     func generateSwiftCode() -> String {
-        """
-                Text("\(text)")
-                    .font(.system(size: \(fontSize)))
-                    .foregroundColor(\(textColor.swiftUIColorCode))
-                    .frame(width: \(size.width), height: \(size.height))
-                    .background(\(backgroundColor.swiftUIColorCode))
-                """
+        let content = propiedades["content"] as? String ?? "Hello, World!"
+        return "Text(\"\(content)\")"
     }
 }

@@ -20,8 +20,12 @@ struct ImageComponent: UIComponent {
     var imageName: String
     var cornerRadius: CGFloat
     var contentMode: ContentMode
+    var name: String = "Image"
+    var propiedades: [String: Any] = [:]
+    var children: [UIComponent] = []
+    var isModule: Bool = false
     
-    init(
+    init(   
         position: CGPoint = .zero,
         size: CGSize = CGSize(width: 100, height: 100),
         zIndex: Int = 0,
@@ -45,15 +49,8 @@ struct ImageComponent: UIComponent {
     }
     
     func generateSwiftCode() -> String {
-        """
-                Image("\(imageName)")
-                    .resizable()
-                    .aspectRatio(contentMode: .\(contentMode == .fit ? "fit" : "fill"))
-                    .frame(width: \(size.width), height: \(size.height))
-                    .background(\(backgroundColor.swiftUIColorCode))
-                    .cornerRadius(\(cornerRadius))
-                    .position(x: \(position.x), y: \(position.y))
-                """
+        let content = propiedades["content"] as? String ?? "Hello, World!"
+        return "Image(\"\(content)\")"
     }
         
 }

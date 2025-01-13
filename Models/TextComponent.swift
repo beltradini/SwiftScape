@@ -1,40 +1,39 @@
 //
-//  ButtonComponent.swift
-//  SwiftScape
+// TextComponent.swift
+// SwiftScape
 //
-//  Created by Alejandro Beltrán on 1/11/25.
-//
+// Created by Alejandro Beltrán on 1/13/25.
+// 
 
 import SwiftUI
 
-struct ButtonComponent: UIComponent {
+struct TextComponent: UIcomponent {
     var id = UUID()
     var position: CGPoint
     var size: CGSize
     var zIndex: Int
     var backgroundColor: Color
     var isResizable: Bool
-    var title: String // Text displayed on the button
-    var actionCode: String // Action to be executed on tap
     var textColor: Color
     var fontSize: CGFloat
     var text: String
-    var name: String = "Button"
+    var name: String = "Text"
     var propiedades: [String: Any] = [:]
     var children: [UIComponent] = []
     var isModule: Bool = false
     
     func generateSwiftCode() -> String {
-        let title = propiedades["title"] as? String ?? "Press Me"
-        return "Button(action: { \(actionCode) }) { Text(\"\(title)\") }"
+        let content = propiedades["content"] as? String ?? "Hello, World!"  
+        return "Text(\"\(content)\")"
     }
     
     func render() -> AnyView {
         AnyView(
-            Text(title)
+            Text(text)
                 .frame(width: size.width, height: size.height)
                 .background(backgroundColor)
-                .cornerRadius(8)
+                .foregroundColor(textColor)
+                .font(.system(size: fontSize))
         )
     }
 }
