@@ -36,6 +36,35 @@ struct LabelInspectedView: View {
                 get: { label.textColor },
                 set: { label.textColor = $0; canvasModel.update(label) }
             ))
+
+            Divider() 
+
+            // Module Toggle 
+            Toggle(isOn: Binding(
+                get: { label.isModule },
+                set: { newValue in 
+                    label.isModule = newValue
+                    canvasModel.update(label)
+                    
+                    // If becoming a module, update properties
+                    if newValue {
+                        label.name = "Module_" + label.name
+                        label.propiedades["isModule"] = true
+                    }
+                }
+            )) {
+                Text("Convert to Module")
+                    .font(.subheadline)
+            }
+            .padding(.vertical, 8)
+
+            if label.isModule {
+                TextField("Module Name", text: Binding(
+                    get: { label.name },
+                    set: { label.name = $0; canvasModel.update(label) }
+                ))
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
         }
     }
 }
