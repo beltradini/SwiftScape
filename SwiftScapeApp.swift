@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UIKit
 @main
 struct SwiftScapeApp: App {
     var body: some Scene {

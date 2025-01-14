@@ -70,7 +70,7 @@ class CanvasViewModel: ObservableObject {
         moduleTemplates.append(module)
     }
 
-    func createModuleInstance(from template: templateId: UUID) -> ModuleComponent? {
+    func createModuleInstance(from templateId: UUID) -> ModuleComponent? {
         guard let template = moduleTemplates.first(where: { $0.id == templateId }) else {
             return nil
         }
