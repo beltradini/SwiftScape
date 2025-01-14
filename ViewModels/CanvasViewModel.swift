@@ -11,6 +11,7 @@ import SwiftUI
 class CanvasViewModel: ObservableObject {
     @Published var components: [UIComponent] = []
     @Published var selectedComponent: (UIComponent)? = nil
+    @Published var moduleTemplates: [ModuleComponent] = []
     
     // MARK: - Methods to Manage Components
     
@@ -61,5 +62,17 @@ class CanvasViewModel: ObservableObject {
             text: "Hello World!"
         )
         components.append(newComponent)
+    }
+
+    // Reusable Module Implementation
+    func saveAsModuleTemplate(_ module: ModuleComponent) {
+        moduleTemplates.append(module)
+    }
+
+    func createModuleInstance(from template: templateId: UUID) -> ModuleComponent? {
+        guard let template = moduleTemplates.first(where: { $0.id == templateId }) else {
+            return nil
+        }
+        return template.cloneAsInstance()
     }
 }

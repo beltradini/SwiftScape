@@ -25,6 +25,29 @@ struct ModuleComponent: UIComponent {
     var isModule: Bool
     var name: String
 
+    func cloneAsInstance() -> ModuleComponent {
+        var clone = ModuleComponent(
+            textColor: textColor,
+            fontSize: fontSize,
+            text: text,
+            imageName: imageName,
+            cornerRadius: cornerRadius,
+            id: UUID(),
+            position: position,
+            size: size,
+            zIndex: zIndex,
+            backgroundColor: backgroundColor,
+            isResizable: isResizable,
+            title: title,
+            propiedades: propiedades,
+            children: children,
+            isModule: isModule,
+            name: name
+        )
+        clone.templateId = self.id
+        return clone
+    }
+
     func generateSwiftCode() -> String {
       var code = "struct \(name): View {\n"
         code += "    var body: some View {\n"
