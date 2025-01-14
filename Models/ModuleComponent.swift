@@ -17,6 +17,7 @@ struct ModuleComponent: UIComponent {
     var propiedades: [String: Any]
     var children: [UIComponent]
     var isModule: Bool
+    var name: String
 
     func generateSwiftCode() -> String {
       var code = "struct \(name): View {\n"
