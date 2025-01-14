@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 protocol UIComponent: Identifiable {
     var id: UUID { get } // Unique identifiquer for each component

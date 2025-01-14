@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ButtonComponent: UIComponent {
     var id = UUID()

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ComponentPickerView: View {
     @ObservedObject var canvasModel: CanvasModel

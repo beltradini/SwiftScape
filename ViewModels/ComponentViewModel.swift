@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 /// ViewModel for managing individual UIComponent propierties
 class ComponentViewModel: ObservableObject {

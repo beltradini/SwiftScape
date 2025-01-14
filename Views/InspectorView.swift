@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct LabelInspectedView: View {
     @ObservedObject var label: LabelComponent

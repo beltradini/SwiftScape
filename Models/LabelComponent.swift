@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct LabelComponent: UIComponent {
     var imageName: String

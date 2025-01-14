@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 // ViewModel for managing components in the canvas and generating SwiftUI code.
 class CanvasViewModel: ObservableObject {

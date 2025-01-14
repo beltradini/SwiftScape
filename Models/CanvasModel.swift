@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 // A model representing the canvas and its components
 class CanvasModel: ObservableObject {

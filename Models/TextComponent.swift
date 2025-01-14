@@ -6,6 +6,7 @@
 // 
 
 import SwiftUI
+import UIKit
 
 struct TextComponent: UIComponent {
     var imageName: String
