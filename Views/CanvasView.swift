@@ -76,10 +76,11 @@ struct CanvasView: View {
             }
         }
         .sheet(isPresented: $isShowingModulePicker) {
-            ModulePickerView(canvasModel: canvasModel)
+            ModulePicker(canvasModel: canvasModel)
         }
         .cornerRadius(8)
         .shadow(radius: 4)
+        }
     }
 }
 
@@ -92,4 +93,3 @@ extension View {
             )
         }
     }
-}

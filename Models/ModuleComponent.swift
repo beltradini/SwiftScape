@@ -32,7 +32,7 @@ struct ModuleComponent: UIComponent {
             fontSize: fontSize,
             text: text,
             imageName: imageName,
-            cornerRadius: cornerRadius,
+            cornerRadius: cornerRadius, contentMode: contentMode,
             id: UUID(),
             position: position,
             size: size,

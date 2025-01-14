@@ -9,14 +9,14 @@ import SwiftUI
 import UIKit
 
 /// ViewModel for managing individual UIComponent propierties
-class ComponentViewModel: ObservableObject {
-    @Published var id: UUID
-    @Published var position: CGPoint
-    @Published var size: CGSize
-    @Published var backgroundColor: Color
-    @Published var text: String
-    @Published var fontSize: CGFloat
-    @Published var cornerRadius: CGFloat
+struct ComponentViewModel {
+    var id: UUID = UUID()
+    var position: CGPoint = CGPoint(x: 0, y: 0)
+    var size: CGSize = CGSize(width: 100, height: 50)
+    var backgroundColor: Color = .black
+    var text: String = ""
+    var fontSize: CGFloat = 20
+    var cornerRadius: CGFloat = 10
     
     // Initialization with default or provided values
     init(
@@ -38,7 +38,7 @@ class ComponentViewModel: ObservableObject {
     }
     
     // Updates a property of the component
-    func updateProperty<T>(_ keyPath: WritableKeyPath<ComponentViewModel, T>, value: T) {
+    mutating func updateProperty<T>(_ keyPath: WritableKeyPath<ComponentViewModel, T>, value: T) {
         self[keyPath: keyPath] = value
     }
     

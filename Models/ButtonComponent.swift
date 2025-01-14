@@ -9,6 +9,9 @@ import SwiftUI
 import UIKit
 
 struct ButtonComponent: UIComponent {
+    var imageName: String
+    var cornerRadius: CGFloat
+    var contentMode: ContentMode
     var id = UUID()
     var position: CGPoint
     var size: CGSize
