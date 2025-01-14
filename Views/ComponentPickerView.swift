@@ -99,8 +99,8 @@ struct ComponentPickerView: View {
     // Propiedad para gestionar el componente seleccinado
     @State private var selectedComponent: String? = nil
     
-    var body: some View {
-        NavigationView {        
+    var body1: some View {
+        NavigationView {
             VStack {
                 List(avialableComponents, id: \.self) { component in
                     HStack {
