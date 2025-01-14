@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 struct CanvasView: View {
     @ObservedObject var canvasModel: CanvasViewModel  // Single consistent model
     @State private var selectedComponentId: UUID?
@@ -24,6 +25,28 @@ struct CanvasView: View {
             
             // Components
             ForEach(canvasModel.components) { component in
+            if let moduleComponent = component as? ModuleComponent {
+                moduleComponent.render()
+                    .position(x: component.position.x, y: component
+                    .position.y)
+                    .onTapGesture {
+                        selectedComponentId = component.id
+                        canvasModel.selectedComponent(component)
+                    }
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                guard let index = canvasModel.components.firstIndex(where: { $0.id == component.id }) else { return }
+                                
+                                // Bound checking
+                                let newX = min(max(value.location.x, 0), UIScreen.main.bounds.width)
+                                let newY = min(max(value.location.y, 0), UIScreen.main.bounds.height)
+                                
+                                canvasModel.components[index].position = CGPoint(x: newX, y: newY)
+                            }
+                    )
+                    .selected(selectedComponentId == component.id)  
+            } else {
                 component.render()
                     .position(x: component.position.x, y: component.position.y)
                     .onTapGesture {
@@ -66,6 +89,7 @@ extension View {
         self.overlay(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 2)
-        )
+            )
+        }
     }
 }

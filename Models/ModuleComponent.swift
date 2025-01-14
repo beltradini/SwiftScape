@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ModuleComponent: UIComponent {
     var textColor: Color
@@ -64,12 +65,24 @@ struct ModuleComponent: UIComponent {
     func render() -> AnyView {
        AnyView(
             ZStack {
+                // Module boundary 
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, dash: [5]))
                     .frame(width: size.width, height: size.height)
+                
+                // Child components
                 ForEach(children, id: \.id) { child in
                     child.render()
+                        .position(x: child.position.x, y: child.position.y)
                 }
+
+                // Module name 
+                Text(name)
+                    .font(.caption)
+                    .padding(4)
+                    .background(Color.white.opacity(0.8))
+                    .cornerRadius(4)
+                    .position(x: size.width / 2, y: size.height / 2)
             }
         )
     }
