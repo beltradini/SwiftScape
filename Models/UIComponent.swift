@@ -62,7 +62,7 @@ extension ContentMode {
 
 // Generador de Código Modular!
 class ModularCodeGenerator {
-    func generateCode(from components: [UIComponent]) -> String {
+    func generateCode(from components: [any UIComponent]) -> String {
         var code = ""
 
         for component in components {
@@ -77,7 +77,7 @@ class ModularCodeGenerator {
         return code
     }
 
-    func generateModuleCode(for component: UIComponent) -> String {
+    func generateModuleCode(for component: any UIComponent) -> String {
         var moduleCode = ""
 
         moduleCode += "struct \(component.name): View {\n"

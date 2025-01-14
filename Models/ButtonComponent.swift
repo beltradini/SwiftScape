@@ -21,7 +21,7 @@ struct ButtonComponent: UIComponent {
     var text: String
     var name: String = "Button"
     var propiedades: [String: Any] = [:]
-    var children: [UIComponent] = []
+    var children: [any UIComponent] = []
     var isModule: Bool = false
     
     func generateSwiftCode() -> String {

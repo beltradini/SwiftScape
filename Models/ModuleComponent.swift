@@ -7,6 +7,12 @@
 import SwiftUI
 
 struct ModuleComponent: UIComponent {
+    var textColor: Color
+    var fontSize: CGFloat
+    var text: String
+    var imageName: String
+    var cornerRadius: CGFloat
+    var contentMode: ContentMode
     var id = UUID()
     var position: CGPoint
     var size: CGSize
@@ -15,7 +21,7 @@ struct ModuleComponent: UIComponent {
     var isResizable: Bool
     var title: String
     var propiedades: [String: Any]
-    var children: [UIComponent]
+    var children: [any UIComponent]
     var isModule: Bool
     var name: String
 

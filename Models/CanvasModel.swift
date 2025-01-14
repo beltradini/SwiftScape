@@ -46,7 +46,7 @@ class CanvasModel: ObservableObject {
     func generateCanvasSwiftUICode() -> String {
         components
             .sorted(by: { $0.zIndex < $1.zIndex }) // Ensure correct redering order
-            .map { $0.generateSwiftUICode() }
+            .map { $0.generateSwiftCode() }
             .joined(separator: "n/n")
     }
 }

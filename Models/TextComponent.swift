@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct TextComponent: UIcomponent {
+struct TextComponent: UIComponent {
+    var imageName: String
+    var cornerRadius: CGFloat
+    var contentMode: ContentMode
     var id = UUID()
     var position: CGPoint
     var size: CGSize
@@ -19,7 +22,7 @@ struct TextComponent: UIcomponent {
     var text: String
     var name: String = "Text"
     var propiedades: [String: Any] = [:]
-    var children: [UIComponent] = []
+    var children: [any UIComponent] = []
     var isModule: Bool = false
     
     func generateSwiftCode() -> String {

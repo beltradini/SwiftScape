@@ -22,7 +22,7 @@ struct ImageComponent: UIComponent {
     var contentMode: ContentMode
     var name: String = "Image"
     var propiedades: [String: Any] = [:]
-    var children: [UIComponent] = []
+    var children: [any UIComponent] = []
     var isModule: Bool = false
     
     init(   
