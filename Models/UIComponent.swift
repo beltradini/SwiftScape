@@ -23,11 +23,20 @@ protocol UIComponent: Identifiable {
     // Future improvements: Advanced Code Generator 
     var name: String { get set } // Name of the component 
     var propiedades: [String: Any] { get set } // Properties of the component
-    var children: [UIComponent] { get set } // Child components
+    var children: [any UIComponent] { get set } // Child components
     var isModule: Bool { get set } // Whether the component is a module or not
     
     // Generate SwiftUI code this component
     func generateSwiftCode() -> String
+    func generateModuleCode() -> String // Generate SwiftUI code for a module
+    func render() -> AnyView // Render the component
+}
+
+extension UIComponent {
+    func generateModuleCode() -> String {
+        // Default implementation
+        return generateSwiftCode()
+    }
 }
 
 extension Color {
@@ -48,5 +57,35 @@ extension ContentMode {
             case .fill: return ".fill"
             @unknown default: return ".fit"
         }
+    }
+}
+
+// Generador de Código Modular!
+class ModularCodeGenerator {
+    func generateCode(from components: [UIComponent]) -> String {
+        var code = ""
+
+        for component in components {
+            if component.isModule {
+            // Generate code for each component
+            code += component.generateModuleCode(for: component)
+        } else {
+            // Generate from part of the principal design
+            code += component.generateSwiftCode() + "\n"
+            }
+        }
+        return code
+    }
+
+    func generateModuleCode(for component: UIComponent) -> String {
+        var moduleCode = ""
+
+        moduleCode += "struct \(component.name): View {\n"
+        moduleCode += "var body: some View {\n"
+        moduleCode += "   \(component.generateSwiftCode())\n"
+        moduleCode += "}\n"
+        moduleCode += "}\n\n"
+
+        return moduleCode
     }
 }
