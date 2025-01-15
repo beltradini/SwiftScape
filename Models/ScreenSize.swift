@@ -5,7 +5,6 @@
 // Created by Alejandro Beltrán on 1/14/25
 // 
 
-import Foundation
 import SwiftUI
 import UIKit
 

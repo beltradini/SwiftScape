@@ -12,8 +12,10 @@ struct CanvasView: View {
     @State private var selectedComponentId: UUID?
     @State private var isShowingPicker: Bool = false
     @State private var isShowingModulePicker = false
+    @State private var currentScreenSize = ScreenSize.current()
     
     var body: some View {
+        GeometryReader { geometry in 
         ZStack {
             // Background
             Color(UIColor.systemGray5)
@@ -25,6 +27,13 @@ struct CanvasView: View {
             
             // Components
             ForEach(canvasModel.components) { component in
+            let adaptedSize = ResponsiveLayout.adaptedSize(component.size, for: currentScreenSize)
+
+            component.render()
+                .frame(width: adaptedSize.width, height: adaptedSize.height)
+                .position(x: component.position.x * ResponsiveLayout.scale(for: currentScreenSize),
+                 y: component.position.y * ResponsiveLayout.scale(for: currentScreenSize))
+
             if let moduleComponent = component as? ModuleComponent {
                 moduleComponent.render()
                     .position(x: component.position.x, y: component
@@ -80,6 +89,12 @@ struct CanvasView: View {
         }
         .cornerRadius(8)
         .shadow(radius: 4)
+
+        // Geometric Sizes for Responsive Layout
+        .onChange(of: geometry.size) { newSize in
+            currentScreenSize = ResponsiveLayout.current(for: newSize)
+                }
+            }
         }
     }
 }

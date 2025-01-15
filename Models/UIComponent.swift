@@ -31,6 +31,17 @@ protocol UIComponent: Identifiable {
     func generateSwiftCode() -> String
     func generateModuleCode() -> String // Generate SwiftUI code for a module
     func render() -> AnyView // Render the component
+
+}
+
+// Responsive Size for the components
+func responsiveSize(for screenSize: ScreenSize) -> CGSize {
+    ResponsiveLayout.adaptedSize(self.size, for: screenSize)
+}
+
+func responsivePosition(for screenSize: ScreenSize) -> CGPoint {
+    let scale = ResponsiveLayout.scale(for: screenSize)
+    return CGPoint(x: self.position.x * scale, y: self.position.y * scale)
 }
 
 extension UIComponent {
