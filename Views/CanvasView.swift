@@ -30,6 +30,7 @@ struct CanvasView: View {
             let adaptedSize = ResponsiveLayout.adaptedSize(component.size, for: currentScreenSize)
 
             component.render()
+                .applyAnimation(component.animation)
                 .frame(width: adaptedSize.width, height: adaptedSize.height)
                 .position(x: component.position.x * ResponsiveLayout.scale(for: currentScreenSize),
                  y: component.position.y * ResponsiveLayout.scale(for: currentScreenSize))

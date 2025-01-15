@@ -26,6 +26,7 @@ protocol UIComponent: Identifiable {
     var propiedades: [String: Any] { get set } // Properties of the component
     var children: [any UIComponent] { get set } // Child components
     var isModule: Bool { get set } // Whether the component is a module or not
+    var animation: Animation { get set } // Animation for the component
     
     // Generate SwiftUI code this component
     func generateSwiftCode() -> String
