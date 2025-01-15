@@ -109,3 +109,18 @@ extension View {
             )
         }
     }
+
+// Add Reusable Styles System 
+
+extension View {
+    func applyStyle(_ style: ComponentStyle) -> some View {
+        self
+            .font(style.font)
+            .foregroundColor(style.foregroundColor)
+            .padding(style.padding)
+            .background(style.backgroundColor)
+            .cornerRadius(style.cornerRadius)
+            .shadow(color: style.shadow.color, radius: style.shadow.radius, x: style.shadow.x, y: style.shadow.y)
+            .padding(style.padding)
+    }
+}
