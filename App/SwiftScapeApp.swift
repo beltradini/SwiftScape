@@ -14,4 +14,10 @@ struct SwiftScapeApp: App {
             ContentView()
         }
     }
+    #if os(visionOS)
+        WindowGroup(id: "inmersive") {
+            InmersiveView()
+        }
+        .windowStyle(.volumetric)
+    #endif
 }
