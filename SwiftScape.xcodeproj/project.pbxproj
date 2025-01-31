@@ -13,8 +13,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D1225A92D32E13400E75075 /* SwiftScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftScape.app; path = "/Users/alexbeltran/Library/Mobile Documents/com~apple~CloudDocs/Swift Code/gitHub projects/SwiftScape/build/Debug-iphoneos/SwiftScape.app"; sourceTree = "<absolute>"; };
 		9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftScapeApp.swift; sourceTree = "<group>"; };
+		9D3D5AE22D4D249200EECDA0 /* SwiftScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE196C72D3435AF00E55283 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9DE196C92D34362400E55283 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +40,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		9D3D5B1E2D4D25BE00EECDA0 /* visionOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = visionOS;
+			sourceTree = "<group>";
+		};
+		9D3D5B222D4D25E400EECDA0 /* Assets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9D3D5B252D4D285800EECDA0 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +71,17 @@
 		9D1225A02D32E13400E75075 = {
 			isa = PBXGroup;
 			children = (
+				9D3D5B252D4D285800EECDA0 /* Services */,
+				9D3D5B222D4D25E400EECDA0 /* Assets */,
+				9D3D5B1E2D4D25BE00EECDA0 /* visionOS */,
 				9DE196C92D34362400E55283 /* README.md */,
 				9DE196C72D3435AF00E55283 /* LICENSE */,
+				9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */,
+				9D3D5AE22D4D249200EECDA0 /* SwiftScape.app */,
 				9D1225C52D32E20A00E75075 /* ViewModels */,
 				9D1225C42D32E20100E75075 /* Views */,
 				9D1225C32D32E1F700E75075 /* Models */,
 				9D1225AB2D32E13400E75075 /* SwiftScape */,
-				9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,12 +105,15 @@
 				9D1225C32D32E1F700E75075 /* Models */,
 				9D1225C42D32E20100E75075 /* Views */,
 				9D1225C52D32E20A00E75075 /* ViewModels */,
+				9D3D5B1E2D4D25BE00EECDA0 /* visionOS */,
+				9D3D5B222D4D25E400EECDA0 /* Assets */,
+				9D3D5B252D4D285800EECDA0 /* Services */,
 			);
 			name = SwiftScape;
 			packageProductDependencies = (
 			);
 			productName = SwiftScape;
-			productReference = 9D1225A92D32E13400E75075 /* SwiftScape.app */;
+			productReference = 9D3D5AE22D4D249200EECDA0 /* SwiftScape.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
