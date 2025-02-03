@@ -41,6 +41,19 @@ struct ContentView: View {
     }
 }
 
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Add Siri Shortcuts")
+                SiriButtonView()
+                    .frame(width: 100, height: 100)
+            }
+            .navigationTitle("SwiftScape")
+        }
+    }
+}
+
 #Preview {
     ContentView()
 }
