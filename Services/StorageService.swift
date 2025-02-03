@@ -54,6 +54,35 @@ final class iCloudStorageService: StorageService {
   }
 }
 
+// Create and save records 
+func saveDesign(_ design: Desing, fileName: String) {
+  let record = CKRecord(recordType: "Design")
+  record["filename"] = fileName as CKRecordValue
+  let data = try? JSONEncoder().encode(design)
+  record["content"] = data as CKRecordValue
+
+  privateDB.save(record) { _, error in 
+    if let error = error {
+      print("Error saving record: \(error)")
+    }
+  }
+}
+
+// Fetch and decode data from CloudKit
+func loadDesign(fileName: String, completion: @escaping (Design?) -> Void) {
+  let query = CKQuery(recordType: "Design", predicate: NSPredicate(format: "filename == %@", fileName))
+  privateDB.perform(query, inZoneWith: nil) { records, _ in 
+    guard let record = records?.first,
+          let data = record["content"] as? Data,
+          let design = try? JSONDecoder().decode(Design.self, from: data) else {
+      completion(nil)
+      return
+    }
+    completion(design)
+  }
+}
+
+// Suscribe to changes for sync 
 func createSubscription() {
   let subscription = CKQuerySubscription(
     recordType: "SwiftScapeData",
