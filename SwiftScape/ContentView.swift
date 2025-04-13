@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             // Canvas Area
-            CanvasView(canvasModel1: canvasModel)
+            CanvasView(canvasModel: canvasModel)
                 .frame(maxHeight: 400)
                 .padding()
             
@@ -38,19 +38,6 @@ struct ContentView: View {
             }
         }
         .padding()
-    }
-}
-
-struct ContentView: View {
-    var body: some View {
-        NavigationView {
-            VStack {
-                Text("Add Siri Shortcuts")
-                SiriButtonView()
-                    .frame(width: 100, height: 100)
-            }
-            .navigationTitle("SwiftScape")
-        }
     }
 }
 

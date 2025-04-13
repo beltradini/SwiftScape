@@ -25,8 +25,8 @@ final class iCloudStorageService: StorageService {
     let record = CKRecord(recordType: "SwiftScapeData")
     let encoder = JSONEncoder()
     let encodedData = try encoder.encode(data)
-    record.["filename"] = fileName as CKRecordValue
-    record.["content"] = encodedData as CKRecordValue
+    record["filename"] = fileName as CKRecordValue
+    record["content"] = encodedData as CKRecordValue
 
     privateDB.save(record) { _, error in 
     if let error = error {
@@ -93,10 +93,11 @@ func createSubscription() {
   let info = CKSubscription.NotificationInfo()
   info.shouldSendContentAvailable = true // Silent push notification
 
-  subscript.notificationInfo = info
-  privateDB.save(subscription) { _, error in 
-    if let error = error {
-      print("Error saving subscription: \(error)")
+    subscription.notificationInfo = info
+    
+    privateDB.save(subscription) { _, error in
+        if let error = error {
+            print("Error creating subscription: \(error)")
+        }
     }
-  }
 }

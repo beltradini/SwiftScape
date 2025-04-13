@@ -60,7 +60,7 @@ struct AnimationModifier: ViewModifier {
             .animation(
                 .easeInOut(duration: animation?.type.duration ?? 0.5)
                 .delay(animation?.delay ?? 0)
-                .repeatCount(animation?.repeatCount ?? 1)
+                .repeatCount(animation?.repeatCount ?? 1),
             value: isAnimating
             )
             .onAppear {
