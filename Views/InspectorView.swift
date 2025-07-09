@@ -6,7 +6,10 @@
 //
 
 import SwiftUI
+<<<<<<< Updated upstream
 import UIKit
+=======
+>>>>>>> Stashed changes
 
 struct LabelInspectedView: View {
     @ObservedObject var label: LabelComponent
@@ -36,6 +39,7 @@ struct LabelInspectedView: View {
                 get: { label.textColor },
                 set: { label.textColor = $0; canvasModel.update(label) }
             ))
+<<<<<<< Updated upstream
 
             Divider() 
 
@@ -65,6 +69,8 @@ struct LabelInspectedView: View {
                 ))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             }
+=======
+>>>>>>> Stashed changes
         }
     }
 }

@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
+=======
+		9D1225C22D32E1E000E75075 /* SwiftScapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */; };
+>>>>>>> Stashed changes
 		9DE196C82D3435B700E55283 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9DE196C72D3435AF00E55283 /* LICENSE */; };
 		9DE196CA2D34362D00E55283 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9DE196C92D34362400E55283 /* README.md */; };
 /* End PBXBuildFile section */
 
+<<<<<<< Updated upstream
 /* Begin PBXContainerItemProxy section */
 		9DF54B3B2DABFF3F0046F903 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -41,6 +46,13 @@
 		9DE196C72D3435AF00E55283 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9DE196C92D34362400E55283 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9DF54B372DABFF3F0046F903 /* SwiftScapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftScapeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+/* Begin PBXFileReference section */
+		9D1225A92D32E13400E75075 /* SwiftScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftScape.app; path = "/Users/alexbeltran/Library/Mobile Documents/com~apple~CloudDocs/Swift Code/gitHub projects/SwiftScape/build/Debug-iphoneos/SwiftScape.app"; sourceTree = "<absolute>"; };
+		9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftScapeApp.swift; sourceTree = "<group>"; };
+		9DE196C72D3435AF00E55283 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9DE196C92D34362400E55283 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -84,6 +96,7 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		9D3D5B1E2D4D25BE00EECDA0 /* visionOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = visionOS;
@@ -107,6 +120,8 @@
 			path = SwiftScapeTests;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> Stashed changes
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,15 +145,19 @@
 		9D1225A02D32E13400E75075 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
 				9D3D5B252D4D285800EECDA0 /* Services */,
 				9D3D5B222D4D25E400EECDA0 /* Assets */,
 				9D3D5B1E2D4D25BE00EECDA0 /* visionOS */,
+=======
+>>>>>>> Stashed changes
 				9DE196C92D34362400E55283 /* README.md */,
 				9DE196C72D3435AF00E55283 /* LICENSE */,
 				9D1225C52D32E20A00E75075 /* ViewModels */,
 				9D1225C42D32E20100E75075 /* Views */,
 				9D1225C32D32E1F700E75075 /* Models */,
 				9D1225AB2D32E13400E75075 /* SwiftScape */,
+<<<<<<< Updated upstream
 				9DF54B382DABFF3F0046F903 /* SwiftScapeTests */,
 				9DB696BD2D512FB200150FB1 /* Frameworks */,
 				9D81F79E2DAA8899008894A7 /* SwiftScape.app */,
@@ -155,6 +174,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+=======
+				9D1225BE2D32E1E000E75075 /* SwiftScapeApp.swift */,
+			);
+			sourceTree = "<group>";
+		};
+>>>>>>> Stashed changes
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +201,12 @@
 				9D1225C32D32E1F700E75075 /* Models */,
 				9D1225C42D32E20100E75075 /* Views */,
 				9D1225C52D32E20A00E75075 /* ViewModels */,
+<<<<<<< Updated upstream
 				9D3D5B1E2D4D25BE00EECDA0 /* visionOS */,
 				9D3D5B222D4D25E400EECDA0 /* Assets */,
 				9D3D5B252D4D285800EECDA0 /* Services */,
+=======
+>>>>>>> Stashed changes
 			);
 			name = SwiftScape;
 			packageProductDependencies = (
@@ -256,6 +284,7 @@
 			files = (
 				9DE196CA2D34362D00E55283 /* README.md in Resources */,
 				9DE196C82D3435B700E55283 /* LICENSE in Resources */,
+<<<<<<< Updated upstream
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +292,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+=======
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1225C22D32E1E000E75075 /* SwiftScapeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

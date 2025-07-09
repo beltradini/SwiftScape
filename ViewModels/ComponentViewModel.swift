@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+<<<<<<< Updated upstream
 import UIKit
 
 /// ViewModel for managing individual UIComponent propierties
@@ -17,6 +18,18 @@ struct ComponentViewModel {
     var text: String = ""
     var fontSize: CGFloat = 20
     var cornerRadius: CGFloat = 10
+=======
+
+/// ViewModel for managing individual UIComponent propierties
+class ComponentViewModel: ObservableObject {
+    @Published var id: UUID
+    @Published var position: CGPoint
+    @Published var size: CGSize
+    @Published var backgroundColor: Color
+    @Published var text: String
+    @Published var fontSize: CGFloat
+    @Published var cornerRadius: CGFloat
+>>>>>>> Stashed changes
     
     // Initialization with default or provided values
     init(
@@ -38,7 +51,11 @@ struct ComponentViewModel {
     }
     
     // Updates a property of the component
+<<<<<<< Updated upstream
     mutating func updateProperty<T>(_ keyPath: WritableKeyPath<ComponentViewModel, T>, value: T) {
+=======
+    func updateProperty<T>(_ keyPath: WritableKeyPath<ComponentViewModel, T>, value: T) {
+>>>>>>> Stashed changes
         self[keyPath: keyPath] = value
     }
     

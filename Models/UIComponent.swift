@@ -6,7 +6,10 @@
 //
 
 import SwiftUI
+<<<<<<< Updated upstream
 import UIKit
+=======
+>>>>>>> Stashed changes
 
 protocol UIComponent: Identifiable {
     var id: UUID { get } // Unique identifiquer for each component
@@ -21,6 +24,7 @@ protocol UIComponent: Identifiable {
     var imageName: String { get }
     var cornerRadius: CGFloat { get }
     var contentMode: ContentMode { get }
+<<<<<<< Updated upstream
     // Future improvements: Advanced Code Generator 
     var name: String { get set } // Name of the component 
     var propiedades: [String: Any] { get set } // Properties of the component
@@ -50,6 +54,11 @@ extension UIComponent {
         // Default implementation
         return generateSwiftCode()
     }
+=======
+    
+    // Generate SwiftUI code this component
+    func generateSwiftCode() -> String
+>>>>>>> Stashed changes
 }
 
 extension Color {
@@ -72,6 +81,7 @@ extension ContentMode {
         }
     }
 }
+<<<<<<< Updated upstream
 
 // Generador de Código Modular!
 class ModularCodeGenerator {
@@ -102,3 +112,5 @@ class ModularCodeGenerator {
         return moduleCode
     }
 }
+=======
+>>>>>>> Stashed changes

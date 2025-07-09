@@ -14,7 +14,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             // Canvas Area
+<<<<<<< Updated upstream
             CanvasView(canvasModel: canvasModel)
+=======
+            CanvasView(canvasModel1: canvasModel)
+>>>>>>> Stashed changes
                 .frame(maxHeight: 400)
                 .padding()
             

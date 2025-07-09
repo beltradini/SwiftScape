@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+<<<<<<< Updated upstream
 import UIKit
 
 // ViewModel for managing components in the canvas and generating SwiftUI code.
@@ -13,17 +14,32 @@ class CanvasViewModel: ObservableObject {
     @Published var components: [any UIComponent] = []
     @Published var selectedComponent: (any UIComponent)? = nil
     @Published var moduleTemplates: [ModuleComponent] = []
+=======
+
+// ViewModel for managing components in the canvas and generating SwiftUI code.
+class CanvasViewModel: ObservableObject {
+    @Published var components: [UIComponent] = []
+    @Published var selectedComponent: (UIComponent)? = nil
+>>>>>>> Stashed changes
     
     // MARK: - Methods to Manage Components
     
     /// Adds a new components to the canvas
+<<<<<<< Updated upstream
     func addComponent(_ component: any UIComponent) {
+=======
+    func addComponent(_ component: UIComponent) {
+>>>>>>> Stashed changes
         components.append(component)
         selectedComponent(component)
     }
     
     /// Removes a component from the canvas.
+<<<<<<< Updated upstream
     func removeComponent(_ component: any UIComponent) {
+=======
+    func removeComponent(_ component: UIComponent) {
+>>>>>>> Stashed changes
         components.removeAll { $0.id == component.id }
         if selectedComponent?.id == component.id {
             selectedComponent = nil
@@ -36,7 +52,11 @@ class CanvasViewModel: ObservableObject {
     }
     
     /// Selects a component for editing.
+<<<<<<< Updated upstream
     func selectedComponent(_ component: (any UIComponent)?) {
+=======
+    func selectedComponent(_ component: UIComponent?) {
+>>>>>>> Stashed changes
         selectedComponent = component
     }
     
@@ -47,7 +67,11 @@ class CanvasViewModel: ObservableObject {
         var code = "import SwiftUI\n\nstruct GeneratedView: View {\n    var body: some View {\n        ZStack {\n"
         
         for component in components {
+<<<<<<< Updated upstream
             code += "            \(component.generateSwiftCode())\n"
+=======
+            code += "            \(component.generateCode())\n"
+>>>>>>> Stashed changes
         }
         
         code += "        }\n    }\n}\n\nstruct GeneratedView_Previews: PreviewProvider {\n    static var previews: some View {\n        GeneratedView()\n    }\n}"
@@ -62,6 +86,7 @@ class CanvasViewModel: ObservableObject {
             backgroundColor: .blue,
             text: "Hello World!"
         )
+<<<<<<< Updated upstream
         components.append(newComponent as! any UIComponent)
     }
 
@@ -75,5 +100,8 @@ class CanvasViewModel: ObservableObject {
             return nil
         }
         return template.cloneAsInstance()
+=======
+        components.append(newComponent)
+>>>>>>> Stashed changes
     }
 }

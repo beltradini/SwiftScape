@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+<<<<<<< Updated upstream
 import UIKit
+=======
+>>>>>>> Stashed changes
 
 // A model representing the canvas and its components
 class CanvasModel: ObservableObject {
     @Published var components: [any UIComponent] = [] // List of all components on the canvas
+<<<<<<< Updated upstream
 
     // Updates a component on the canvas
     func update(_ component: any UIComponent) {
@@ -25,6 +29,8 @@ class CanvasModel: ObservableObject {
             components[index].isResizable = false
         }
     }
+=======
+>>>>>>> Stashed changes
     
     // Add a new component to the canvas
     func addComponent(_ component: any UIComponent) {
@@ -61,7 +67,11 @@ class CanvasModel: ObservableObject {
     func generateCanvasSwiftUICode() -> String {
         components
             .sorted(by: { $0.zIndex < $1.zIndex }) // Ensure correct redering order
+<<<<<<< Updated upstream
             .map { $0.generateSwiftCode() }
+=======
+            .map { $0.generateSwiftUICode() }
+>>>>>>> Stashed changes
             .joined(separator: "n/n")
     }
 }
